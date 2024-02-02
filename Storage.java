@@ -4,7 +4,7 @@ public void dataStorageTest(Storage store){
   OutputReturn outputTest = store.output(new Output());
 }
 
-public Interface Storage{
+public interface Storage{
   InputReturn input();
   DelimitReturn delim();
   OutputReturn output();
