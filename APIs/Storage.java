@@ -1,4 +1,4 @@
-package APIs;
+package apis;
 // public void dataStorageTest(Storage store){
 //   InputReturn inputTest = store.input(new Source());
 //   DelimitReturn delimTest = store.delim(new Delim());

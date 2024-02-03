@@ -1,4 +1,4 @@
-package APIs;
+package apis;
 public interface InputReturn{
   boolean success();
 }
