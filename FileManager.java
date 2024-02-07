@@ -4,6 +4,6 @@
 // }
 
 public interface FileManager{
-  ReadResponse read();
-  WriteResponse write();
+  ReadReturn read();
+  WriteReturn write();
 }
