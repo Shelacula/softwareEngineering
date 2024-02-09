@@ -2,10 +2,9 @@ package src;
 
 public class Engine implements EngineAPI {
 
-    @Override
+  @Override
     public ComputeResponse compute(int number) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'compute'");
+      throw new UnsupportedOperationException("Unimplemented method 'compute'");
     }
     
 }
