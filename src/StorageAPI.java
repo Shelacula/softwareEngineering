@@ -6,7 +6,7 @@ package src;
 
 public interface StorageAPI{
   JobResponse startComputationJob(InputReturn input, DelimitReturn delimit);
-  InputReturn input(String inputLocation, String outputLocation);
+  InputReturn input(Input inputLocation, Output outputLocation);
   DelimitReturn delim(String delim);
   DelimitReturn delim();
 }
