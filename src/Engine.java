@@ -1,10 +1,9 @@
 package src;
-//public void testEnginge(Engine engine) {
-//  ComputeResponse testComputer = compute(new Data());
-//  ProcessedResponse testProcess = out(testComputer.data());
-//}
 
-public interface Engine{
-  ComputeResponse compute();
-  ProcessedResponse out();
+public class Engine implements EngineAPI {
+
+  @Override
+  public ComputeResponse compute(int number) {
+    throw new UnsupportedOperationException("Unimplemented method 'compute'");
+  }
 }
