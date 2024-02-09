@@ -6,5 +6,4 @@ public class Engine implements EngineAPI {
   public ComputeResponse compute(int number) {
     throw new UnsupportedOperationException("Unimplemented method 'compute'");
   }
-
-  }
+}
