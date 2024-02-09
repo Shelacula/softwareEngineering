@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import java.io.File;
 
-public class testFileManager {
+public class testFileManager{
   @Test
   public WriteReturn fileManagerTest(){
     FileManager testFile = Mockito.mock(FileManager.class);

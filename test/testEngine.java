@@ -10,12 +10,12 @@ import org.mockito.Mockito;
 import static org.mockito.Mockito.any;
 import static org.mockito.Mockito.when;
 
-public class testEngine {
+public class testEngine{
   @Test
   public void engineTest() {
     Engine testEngine = Mockito.mock(Engine.class);
     when(testEngine.compute(any(Integer.class)))
-      .thenThrow(new RuntimeException("Engine Failure"));
+        .thenThrow(new RuntimeException("Engine Failure"));
 
     ComputeResponse testComputer = testEngine.compute(10);  
     System.out.print(testComputer);

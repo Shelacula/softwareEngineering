@@ -6,7 +6,7 @@ import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-public class testStorage {
+public class testStorage{
   @Test
   public void dataStorageTest(){
     Storage testStore = Mockito.mock(Storage.class);
