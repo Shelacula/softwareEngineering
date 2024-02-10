@@ -1,4 +1,4 @@
 package src;
-public interface DelimitReturn{
+public interface IWriteReturn{
   boolean success();
 }

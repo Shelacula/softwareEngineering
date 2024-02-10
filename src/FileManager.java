@@ -1,21 +1,22 @@
 package src;
 
-import java.io.File;
-
 public class FileManager implements FileManagerAPI{
 
   EngineAPI testEngine;
 
+  public FileManager(EngineAPI testEngine){
+    this.testEngine = testEngine;
+  }
+
   @Override
-  public ReadReturn read(File file) {
+  public Integer[] read(IInput read) {
     // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'read'");
   }
 
   @Override
-  public WriteReturn write(File file, ComputeResponse computed) {
+  public IWriteReturn write(IOutput write, String computed) {
     // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'write'");
   }
-
 }

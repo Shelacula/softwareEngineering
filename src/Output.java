@@ -1,5 +1,5 @@
 package src;
 
-public interface Output {
-    
+public class Output implements IOutput{
+  public Output(){};
 }

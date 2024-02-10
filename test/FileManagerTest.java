@@ -1,23 +1,30 @@
-import src.ComputeResponse;
-import src.FileManagerAPI;
-import src.EngineAPI;
-import src.ReadReturn;
-import src.WriteReturn;
-import java.io.File;
+package test;
+import src.*;
+import org.junit.Test;
+import org.mockito.Mockito;
+import static org.mockito.Mockito.*;
 
-public class FileManagerTest implements FileManagerAPI{
+import src.*;
 
-  EngineAPI testEngine;
 
-  @Override
-  public ReadReturn read(File file) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'read'");
-  }
+public class FileManagerTest {
 
-  @Override
-  public WriteReturn write(File file, ComputeResponse computed) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'write'");
+  @Test
+  public void testFileManager(){
+    //create a fake engine object
+    Engine testEngine = Mockito.mock(Engine.class);
+    TestInput fakeInput = new TestInput();
+    TestOutput fakeOutput = new TestOutput();
+    
+    //define its behavior with mockito
+    when(testEngine.compute(any(Integer.class))).thenReturn("This is a return value from the test.");
+    
+    //create a new instance of filemanager using the fake engine as a dependency
+    FileManager testFile = new FileManager(testEngine);
+
+    //test it?
+    testFile.read(fakeInput);
+    testFile.write(fakeOutput, new String(""));
+    verify(testEngine).compute(any(Integer.class));
   }
 }

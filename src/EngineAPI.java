@@ -1,9 +1,5 @@
 package src;
-//public void testEnginge(Engine engine) {
-//  ComputeResponse testComputer = compute(int data);
-//  
-//}
-
 public interface EngineAPI{
-  ComputeResponse compute(int number);
+  //returns String for now, may need to return a wrapper later on.
+  String compute(int number);
 }

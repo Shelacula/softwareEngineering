@@ -1,5 +1,5 @@
 package src;
 
-public interface Input {
-    
+public class Input implements IInput {
+  public Input(){};
 }
