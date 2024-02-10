@@ -2,7 +2,8 @@ package test;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import src.*;
+import src.FileManager;
+import src.UserStart;
 
 public class UserStartTest {
   @Test

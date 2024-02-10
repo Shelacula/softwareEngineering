@@ -2,12 +2,8 @@ package test;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.*;
-import static org.mockito.Mockito.any;
-import static org.mockito.Mockito.when;
-
-import src.*;
+import src.FileManager;
+import src.Engine;
 
 public class EngineTest {
 

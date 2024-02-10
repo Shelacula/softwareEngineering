@@ -1,7 +1,11 @@
 package test;
 import java.util.List;
 
-import src.*;
+import src.FileManagerAPI;
+import src.IInput;
+import src.IOutput;
+import src.IWriteReturn;
+import src.WriteReturn;
 
 public class InMemoryFileManager implements FileManagerAPI{
 

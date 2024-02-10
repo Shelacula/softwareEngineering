@@ -1,6 +1,7 @@
 package test;
 import src.IOutput;
-import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
 
 public class TestOutput implements IOutput {
   static List<String> output = new ArrayList<String>();
@@ -8,5 +9,5 @@ public class TestOutput implements IOutput {
   };
   public List<String> getValue(){
     return output;
-  };
+  }
 }

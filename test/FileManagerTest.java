@@ -1,11 +1,11 @@
 package test;
-import src.*;
+import src.FileManager;
+import src.Engine;
 import org.junit.Test;
 import org.mockito.Mockito;
-import static org.mockito.Mockito.*;
-
-import src.*;
-
+import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.any;
+import static org.mockito.Mockito.verify;
 
 public class FileManagerTest {
 
