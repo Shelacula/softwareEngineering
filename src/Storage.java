@@ -11,7 +11,7 @@ public class Storage implements StorageAPI{
   }
 
   @Override
-  public InputReturn input(String inputLocation, String outputLocation) {
+  public InputReturn input(Input inputLocation, Output outputLocation) {
     // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'input'");
   }

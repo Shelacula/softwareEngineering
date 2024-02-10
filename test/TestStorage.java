@@ -11,7 +11,10 @@ public class TestStorage{
   public void dataStorageTest(){
     Storage testStore = Mockito.mock(Storage.class);
 
-    InputReturn inputTest = testStore.input(new String(), new String());
+    TestInput testInput = new TestInput();
+    TestOutput testOutput = new TestOutput();
+
+    InputReturn inputTest = testStore.input(testInput, testOutput);
     DelimitReturn delimTest = testStore.delim(new String());
     
     testStore.startComputationJob(inputTest, delimTest);
