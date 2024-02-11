@@ -1,4 +1,4 @@
 package src;
-public interface ComputeResponse{
-  boolean success();
+//will probably use this later, just a placeholder for now
+public interface ComputeResponse {
 }
