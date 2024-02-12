@@ -20,7 +20,7 @@ public class FileManagerTest {
     when(testEngine.compute(any(Integer.class))).thenReturn("This is a return value from the test.");
     
     //create a new instance of filemanager using the fake engine as a dependency
-    FileManager testFile = new FileManager(testEngine);
+    FileManager testFile = new FileManager();
 
     //test it?
     testFile.read(fakeInput);
