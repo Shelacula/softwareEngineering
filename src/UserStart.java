@@ -10,7 +10,6 @@ public class UserStart implements UserStartAPI{
   public UserStart(FileManagerAPI fileManager, EngineAPI engine){
     this.fileManager = fileManager;
     this.engine = engine;
-  }
 
   @Override
   public String startComputationJob(IInput input, IOutput output, String delimit) {

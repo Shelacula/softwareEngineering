@@ -8,8 +8,6 @@ public class Engine implements EngineAPI {
 
   public Engine(){
 
-  }
-
   @Override
   public String compute(int number) {
     throw new UnsupportedOperationException("Unimplemented method 'compute'");

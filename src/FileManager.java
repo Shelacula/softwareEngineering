@@ -6,7 +6,6 @@ public class FileManager implements FileManagerAPI{
 
   public FileManager(){
 
-  }
 
   @Override
   public Integer[] read(IInput read) {

@@ -1,5 +1,5 @@
 # softwareEngineering
-Software Engineering project. 
+Software Engineering project. Compute how many possible coin sums for a given int dollar value. 
 
 # System Diagrams
 
