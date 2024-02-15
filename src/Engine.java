@@ -7,6 +7,8 @@ public class Engine implements EngineAPI {
   //default constructor for Engine
 
   public Engine(){
+    
+  }
 
   @Override
   public String compute(int number) {
