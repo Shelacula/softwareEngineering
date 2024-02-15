@@ -5,8 +5,9 @@ public class Engine implements EngineAPI {
   public FileManagerAPI fileManager;
 
   //default constructor for Engine
-  public Engine(FileManagerAPI fileManager){
-    this.fileManager = fileManager;
+
+  public Engine(){
+    
   }
 
   @Override

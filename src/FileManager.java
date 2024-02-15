@@ -4,9 +4,10 @@ public class FileManager implements FileManagerAPI{
 
   EngineAPI testEngine;
 
-  public FileManager(EngineAPI testEngine){
-    this.testEngine = testEngine;
+  public FileManager(){
+    
   }
+
 
   @Override
   public Integer[] read(IInput read) {

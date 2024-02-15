@@ -2,11 +2,14 @@ package src;
 
 public class UserStart implements UserStartAPI{
   
-  FileManagerAPI testFile;
+  FileManagerAPI fileManager;
+  EngineAPI engine;
+
 
   //constructor for UserStart. It requires a reference to a FileManager.
-  public UserStart(FileManagerAPI testFile){
-    this.testFile = testFile;
+  public UserStart(FileManagerAPI fileManager, EngineAPI engine){
+    this.fileManager = fileManager;
+    this.engine = engine;
   }
 
   @Override
@@ -38,6 +41,5 @@ public class UserStart implements UserStartAPI{
     // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'startComputationJob'");
   }
-
 
 }

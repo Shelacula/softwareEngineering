@@ -5,9 +5,14 @@ import java.util.List;
 import src.IInput;
 
 public class TestInput implements IInput {
-  static List<Integer> input = new ArrayList<Integer>();
+
+  public List<Integer> input = new ArrayList<Integer>();
   public TestInput(){
   };
+  public void addInt(Integer a){
+    this.input.add(a);
+  }
+
   public List<Integer> getValue(){
     return input;
   } 
