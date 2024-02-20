@@ -1,5 +1,7 @@
 package src;
 
+import java.util.Scanner;
+
 public class UserStart implements UserStartAPI{
   
   FileManagerAPI fileManager;
@@ -13,33 +15,38 @@ public class UserStart implements UserStartAPI{
   }
 
   @Override
-  public String startComputationJob(IInput input, IOutput output, String delimit) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'startComputationJob'");
+  public void startComputationJob(IInput input, IOutput output, String delimit) {
+    Integer[] inputArr = fileManager.read(input);
+    for(int i=0;i<inputArr.length;i++){
+      String result = engine.compute(inputArr[i].intValue());
+      fileManager.write(output, result, delimit);
+    }
   }
 
   @Override
-  public String getDelim() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'getDelim'");
+  public void startComputationJob(IInput input, IOutput output) {
+    Integer[] inputArr = fileManager.read(input);
+    for(int i=0;i<inputArr.length;i++){
+      String result = engine.compute(inputArr[i].intValue());
+      fileManager.write(output, result);
+    }
   }
 
   @Override
-  public IInput input() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'input'");
+  public String getDelim(String delim) {
+    // Take in a user specified delimiter character/string
+    return delim;
   }
 
   @Override
-  public IOutput output() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'output'");
+  public IInput input(String input) {
+   // create a new Input file from a user specified path
+   return new Input(input);
   }
 
   @Override
-  public String startComputationJob(IInput uinput, IOutput output) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'startComputationJob'");
+  public IOutput output(String output) {
+    // create a new Output file from user specified path
+    return new Output(output);
   }
-
 }
