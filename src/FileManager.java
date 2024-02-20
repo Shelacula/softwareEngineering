@@ -20,4 +20,10 @@ public class FileManager implements FileManagerAPI{
     // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'write'");
   }
+
+  @Override
+  public IWriteReturn write(IOutput write, String computed, String delim) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'write'");
+  }
 }
