@@ -41,7 +41,7 @@ public class UserStart implements UserStartAPI{
   @Override
   public IInput input(String input) {
    // create a new Input file from a user specified path
-   return new Input(input);
+    return new Input(input);
   }
 
   @Override

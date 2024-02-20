@@ -25,8 +25,9 @@ public class Engine implements EngineAPI {
     for (int i = 0; i <= number; i++) {
       for (int j = 1; j < coins.length; j++) {
         table[i][j] = table[i][j - 1];
-        if (coins[j] <= i)
+        if (coins[j] <= i) {
           table[i][j]+= table[i - coins[j]][j];
+        }
       }
     }
     //return the last value in the matrix, which is the final answer
