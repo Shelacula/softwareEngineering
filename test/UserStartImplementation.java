@@ -1,4 +1,7 @@
 package test;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+
 import org.junit.Test;
 
 import src.Engine;
@@ -7,7 +10,7 @@ import src.FileManager;
 public class UserStartImplementation {
 
   @Test
-  public void implementationTest(){
+  public void implementationTest() throws FileNotFoundException{
     //create components
     Engine testEngine = new Engine();
     FileManager testManager = new InMemoryFileManager();
@@ -22,11 +25,11 @@ public class UserStartImplementation {
     testinput.addInt(25);
 
     //read the input 
-    Integer[] arr = testManager.read(testinput);
+    ArrayList<Integer> arr = testManager.read(testinput);
 
     //iterate through the input and compute/write each value 
-    for(int i=0;i<arr.length;i++){
-      String result = testEngine.compute(arr[i]);
+    for(int i=0;i<arr.size();i++){
+      String result = testEngine.compute(arr.get(i));
       testManager.write(output, result);
     }
 

@@ -1,5 +1,10 @@
 package src;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class FileManager implements FileManagerAPI{
 
   EngineAPI testEngine;
@@ -10,9 +15,8 @@ public class FileManager implements FileManagerAPI{
 
 
   @Override
-  public Integer[] read(IInput read) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'read'");
+  public ArrayList<Integer> read(IInput read) throws FileNotFoundException{
+    throw new UnsupportedOperationException("Unimplemented method 'write'");
   }
 
   @Override
