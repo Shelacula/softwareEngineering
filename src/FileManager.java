@@ -16,7 +16,18 @@ public class FileManager implements FileManagerAPI{
 
   @Override
   public ArrayList<Integer> read(IInput read) throws FileNotFoundException{
-    throw new UnsupportedOperationException("Unimplemented method 'write'");
+    Input input = (Input)read;
+    String file = input.filePath;
+    File inputFile = new File(file);
+    Scanner sc = new Scanner(inputFile);
+    ArrayList<Integer> al = new ArrayList<Integer>();
+    while(sc.hasNextLine()){
+      int num = sc.nextInt();
+      al.add(num);
+    }
+    System.out.println(al);
+    sc.close();
+    return al;
   }
 
   @Override
