@@ -4,13 +4,16 @@ import src.Engine;
 import org.junit.Test;
 import org.mockito.Mockito;
 import static org.mockito.Mockito.when;
+
+import java.io.FileNotFoundException;
+
 import static org.mockito.Mockito.any;
 import static org.mockito.Mockito.verify;
 
 public class FileManagerTest {
 
   @Test
-  public void testFileManager(){
+  public void testFileManager() throws FileNotFoundException{
     //create a fake engine object
     Engine testEngine = Mockito.mock(Engine.class);
     TestInput fakeInput = new TestInput();

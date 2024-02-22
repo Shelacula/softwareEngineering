@@ -2,6 +2,9 @@ package test;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+
 import org.junit.Test;
 import org.mockito.Mockito;
 
@@ -13,12 +16,12 @@ import src.IInput;
 
 public class UserStartTest {
   @Test
-  public void testUserStart() {
+  public void testUserStart() throws FileNotFoundException {
     //create a fake mock FileManager
     FileManager fakeFile = Mockito.mock(FileManager.class);
     Engine fakeEngine = Mockito.mock(Engine.class);
 
-    Integer[] testArr = {Integer.valueOf(4), Integer.valueOf(5), Integer.valueOf(6)};
+    ArrayList<Integer> testArr = new ArrayList<Integer>();
 
     when(fakeFile.read(any(IInput.class))).thenReturn(testArr);
 

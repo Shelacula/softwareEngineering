@@ -1,4 +1,5 @@
 package test;
+import java.util.ArrayList;
 import java.util.List;
 
 import src.FileManagerAPI;
@@ -19,10 +20,10 @@ public class InMemoryFileManager extends FileManager{
 
 
   @Override
-  public Integer[] read(IInput read) {
+  public ArrayList<Integer> read(IInput read) {
     TestInput readIn = (TestInput) read;
     List<Integer> list = readIn.getValue();
-    Integer[] array = list.toArray(new Integer[0]);
+    ArrayList<Integer> array = new ArrayList<Integer>();
     return array;
   }
 
