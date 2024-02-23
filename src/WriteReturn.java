@@ -6,7 +6,7 @@ public class WriteReturn implements IWriteReturn {
 
   public WriteReturn(boolean success){
     this.successful = success;
-  };
+  }
  
 
   @Override
