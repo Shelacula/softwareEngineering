@@ -21,8 +21,7 @@ public class FileManager implements FileManagerAPI{
 
   @Override
   public ArrayList<Integer> read(IInput read) throws FileNotFoundException{
-    Input input = (Input)read;
-    String file = input.filePath;
+    String file = read.getPath();
     File inputFile = new File(file);
     Scanner sc = new Scanner(inputFile);
     ArrayList<Integer> al = new ArrayList<Integer>();
@@ -37,8 +36,7 @@ public class FileManager implements FileManagerAPI{
 
   @Override
   public WriteReturn write(IOutput write, String computed) throws IOException {
-    Output output = (Output) write;
-    String outPath = output.outputPath;
+    String outPath = write.getPath();
     File outputFile = new File(outPath);
     BufferedWriter out = new BufferedWriter(new FileWriter(outputFile));
     try {
@@ -53,10 +51,9 @@ public class FileManager implements FileManagerAPI{
   
 
   @Override
-  public IWriteReturn write(IOutput write, String computed, String delim) {
+  public WriteReturn write(IOutput write, String computed, String delim) {
     try {
-      Output output = (Output) write;
-      String outPath = output.outputPath;
+      String outPath = write.getPath();
       File outputFile = new File(outPath);
 
       outputFile.getParentFile().mkdirs();

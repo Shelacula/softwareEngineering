@@ -20,18 +20,14 @@ public class InMemoryFileManager extends FileManager{
 
 
   @Override
-  public ArrayList<Integer> read(IInput read) {
-    TestInput readIn = (TestInput) read;
-    List<Integer> list = readIn.getValue();
-    ArrayList<Integer> array = new ArrayList<Integer>();
-    return array;
+  public ArrayList<Integer> read(IInput read) { 
+    return read.getArray();
   }
 
   @Override
-  public IWriteReturn write(IOutput write, String computed) {
-    TestOutput writeOut = (TestOutput) write;
-    writeOut.getValue().add(computed);
-    IWriteReturn state = new WriteReturn();
+  public WriteReturn write(IOutput write, String computed) {
+    write.getArray().add(computed);
+    WriteReturn state = new WriteReturn(true);
     return state;
   }
     

@@ -1,5 +1,5 @@
 package test;
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import org.junit.Test;
@@ -10,7 +10,7 @@ import src.FileManager;
 public class UserStartImplementation {
 
   @Test
-  public void implementationTest() throws FileNotFoundException{
+  public void implementationTest() throws IOException{
     //create components
     Engine testEngine = new Engine();
     FileManager testManager = new InMemoryFileManager();
@@ -32,8 +32,6 @@ public class UserStartImplementation {
       String result = testEngine.compute(arr.get(i));
       testManager.write(output, result);
     }
-
-    System.out.println(output.getValue());
     
   }
 }

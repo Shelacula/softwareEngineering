@@ -4,10 +4,15 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class TestOutput implements IOutput {
-  static List<String> output = new ArrayList<String>();
+  ArrayList<String> output = new ArrayList<String>();
   public TestOutput(){
   };
-  public List<String> getValue(){
+  public ArrayList<String> getArray(){
     return output;
+  }
+  @Override
+  public String getPath() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'getPath'");
   }
 }

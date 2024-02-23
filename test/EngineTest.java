@@ -12,6 +12,5 @@ public class EngineTest {
     Engine testEngine = new Engine();
 
     String result = testEngine.compute(10);
-    System.out.println(result);
   }
 }

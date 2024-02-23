@@ -1,6 +1,6 @@
 package src;
 
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -17,7 +17,7 @@ public class UserStart implements UserStartAPI{
   }
 
   @Override
-  public void startComputationJob(IInput input, IOutput output, String delimit) throws FileNotFoundException {
+  public void startComputationJob(IInput input, IOutput output, String delimit) throws IOException {
     ArrayList<Integer> inputArr = fileManager.read(input);
     for(int i=0;i<inputArr.size();i++){
       String result = engine.compute(inputArr.get(i).intValue());
@@ -26,10 +26,11 @@ public class UserStart implements UserStartAPI{
   }
 
   @Override
-  public void startComputationJob(IInput input, IOutput output) throws FileNotFoundException{
+  public void startComputationJob(IInput input, IOutput output) throws IOException{
     ArrayList<Integer> inputArr = fileManager.read(input);
     for(int i=0;i<inputArr.size();i++){
       String result = engine.compute(inputArr.get(i).intValue());
+      System.out.println(result);
       fileManager.write(output, result);
     }
   }
