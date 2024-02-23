@@ -1,7 +1,7 @@
 package test;
 import src.UserStart;
 
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +13,7 @@ import src.FileManager;
 public class ComputeEngineIntegrationTest {
 
   @Test
-  public void integrationTest() throws FileNotFoundException{
+  public void integrationTest() throws IOException{
     Engine testEngine = new Engine();
     FileManager testFile = new InMemoryFileManager();
     UserStart testUser = new UserStart(testFile, testEngine);
@@ -21,16 +21,23 @@ public class ComputeEngineIntegrationTest {
     TestInput testInput = new TestInput();
     TestOutput testOutput = new TestOutput();
 
-    testUser.startComputationJob(testInput, testOutput);
+    testInput.addInt(1);
+    testInput.addInt(10);
+    testInput.addInt(25);
 
-    List<String> result = testOutput.getValue();
+    testUser.startComputationJob(testInput, testOutput);
+    
+
+    List<String> result = testOutput.getArray();
 
     List<String> compare = new ArrayList<String>();
-    compare.add("4563");
-    compare.add("321335886");
-    compare.add("100870228329");
+    compare.add("1");
+    compare.add("11");
+    compare.add("68");
 
-    assert result == compare; 
+    System.out.println(result.get(1));
+
+    assert result.equals(compare); 
 
   }
 }
