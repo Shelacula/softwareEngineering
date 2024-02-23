@@ -53,24 +53,24 @@ public class FileManager implements FileManagerAPI{
   
 
   @Override
-    public IWriteReturn write(IOutput write, String computed, String delim) {
-        try {
-            Output output = (Output) write;
-            String outPath = output.outputPath;
-            File outputFile = new File(outPath);
+  public IWriteReturn write(IOutput write, String computed, String delim) {
+    try {
+      Output output = (Output) write;
+      String outPath = output.outputPath;
+      File outputFile = new File(outPath);
 
-            outputFile.getParentFile().mkdirs();
+      outputFile.getParentFile().mkdirs();
 
-            try (BufferedWriter out = new BufferedWriter(new FileWriter(outputFile))) {
-                out.write(computed + delim);
-                return new WriteReturn(true);
-            } catch (IOException e) {
-                e.printStackTrace();
-                return new WriteReturn(false);
-            }
-        } catch (ClassCastException e) {
-            e.printStackTrace();
-            return new WriteReturn(false);
-        }
+      try (BufferedWriter out = new BufferedWriter(new FileWriter(outputFile))) {
+        out.write(computed + delim);
+        return new WriteReturn(true);
+      } catch (IOException e) {
+        e.printStackTrace();
+        return new WriteReturn(false);
+      }
+    } catch (ClassCastException e) {
+      e.printStackTrace();
+      return new WriteReturn(false);
     }
+  }
 }
