@@ -1,9 +1,14 @@
 package src;
 
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 
 public class FileManager implements FileManagerAPI{
 
@@ -15,9 +20,19 @@ public class FileManager implements FileManagerAPI{
 
 
   @Override
-  public Integer[] read(IInput read) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'read'");
+  public ArrayList<Integer> read(IInput read) throws FileNotFoundException{
+    Input input = (Input)read;
+    String file = input.filePath;
+    File inputFile = new File(file);
+    Scanner sc = new Scanner(inputFile);
+    ArrayList<Integer> al = new ArrayList<Integer>();
+    while(sc.hasNextLine()){
+      int num = sc.nextInt();
+      al.add(num);
+    }
+    System.out.println(al);
+    sc.close();
+    return al;
   }
 
   @Override

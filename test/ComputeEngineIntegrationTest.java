@@ -1,6 +1,7 @@
 package test;
 import src.UserStart;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +13,7 @@ import src.FileManager;
 public class ComputeEngineIntegrationTest {
 
   @Test
-  public void integrationTest(){
+  public void integrationTest() throws FileNotFoundException{
     Engine testEngine = new Engine();
     FileManager testFile = new InMemoryFileManager();
     UserStart testUser = new UserStart(testFile, testEngine);
