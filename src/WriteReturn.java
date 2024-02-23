@@ -2,12 +2,18 @@ package src;
 
 public class WriteReturn implements IWriteReturn {
 
-  public WriteReturn(){};
+  boolean successful;
+
+  public WriteReturn(boolean success){
+    this.successful = success;
+  };
+ 
 
   @Override
   public boolean success() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'success'");
+    return successful;
   }
     
 }
+    
+
