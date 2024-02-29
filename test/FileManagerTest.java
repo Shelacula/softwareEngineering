@@ -1,7 +1,7 @@
 package test;
 import src.FileManager;
 import src.Engine;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import static org.mockito.Mockito.when;
 

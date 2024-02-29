@@ -38,7 +38,9 @@ public class FileManager implements FileManagerAPI{
   public WriteReturn write(IOutput write, String computed) throws IOException {
     String outPath = write.getPath();
     File outputFile = new File(outPath);
-    BufferedWriter out = new BufferedWriter(new FileWriter(outputFile));
+    outputFile.getParentFile().mkdirs();
+    FileWriter fw = new FileWriter(outputFile, true);
+    BufferedWriter out = new BufferedWriter(fw);
     try {
       out.write(computed + ';');
       out.close();
@@ -51,15 +53,17 @@ public class FileManager implements FileManagerAPI{
   
 
   @Override
-  public WriteReturn write(IOutput write, String computed, String delim) {
+  public WriteReturn write(IOutput write, String computed, String delim) throws IOException {
     try {
       String outPath = write.getPath();
       File outputFile = new File(outPath);
-
       outputFile.getParentFile().mkdirs();
+      FileWriter fw = new FileWriter(outputFile, true);
+      BufferedWriter out = new BufferedWriter(fw);
 
-      try (BufferedWriter out = new BufferedWriter(new FileWriter(outputFile))) {
+      try {
         out.write(computed + delim);
+        out.close();
         return new WriteReturn(true);
       } catch (IOException e) {
         e.printStackTrace();
