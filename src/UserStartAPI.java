@@ -9,9 +9,4 @@ public interface UserStartAPI{
 
   //overload method to use default delimiter
   void startComputationJob(IInput uinput, IOutput output) throws FileNotFoundException, IOException;
-
-  //methods to collect user data
-  IInput input(String string);
-  IOutput output(String string);
-  String getDelim(String string);
 }

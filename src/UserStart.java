@@ -34,22 +34,4 @@ public class UserStart implements UserStartAPI{
       fileManager.write(output, result);
     }
   }
-
-  @Override
-  public String getDelim(String delim) {
-    // Take in a user specified delimiter character/string
-    return delim;
-  }
-
-  @Override
-  public IInput input(String input) {
-   // create a new Input file from a user specified path
-    return new Input(input);
-  }
-
-  @Override
-  public IOutput output(String output) {
-    // create a new Output file from user specified path
-    return new Output(output);
-  }
 }
