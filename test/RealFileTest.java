@@ -21,7 +21,7 @@ public class RealFileTest {
     Input input = new Input("C:\\Users\\shela\\Documents\\Software Engineering\\softwareEngineering\\test\\numbers.txt");
     Output output = new Output("C:\\Users\\shela\\Documents\\Software Engineering\\softwareEngineering\\test\\output.txt");
 
-    us.startComputationJob(input, output, "-");
+    us.startComputationJob(input, output);
 
   }
 
