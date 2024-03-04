@@ -1,5 +1,5 @@
 # softwareEngineering
-Software Engineering project. Compute how many possible coin sums for a given int dollar value. 
+Software Engineering project. Compute how many possible coin sums for a given int pound value. Max 20 threads. 
 
 # System Diagrams
 
