@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import org.junit.jupiter.api.Test;
 
 import src.Engine;
-import src.FileManager;
 
 public class UserStartImplementation {
 
@@ -13,7 +12,7 @@ public class UserStartImplementation {
   public void implementationTest() throws IOException{
     //create components
     Engine testEngine = new Engine();
-    FileManager testManager = new InMemoryFileManager();
+    InMemoryFileManager testManager = new InMemoryFileManager();
 
     //create inmemory input/output
     TestInput testinput = new TestInput();

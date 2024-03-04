@@ -1,13 +1,12 @@
 package src;
 
-
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 
 public class FileManager implements FileManagerAPI{
@@ -15,22 +14,21 @@ public class FileManager implements FileManagerAPI{
   EngineAPI testEngine;
 
   public FileManager(){
-    
   }
 
-
   @Override
-  public ArrayList<Integer> read(IInput read) throws FileNotFoundException{
+  public ArrayList<Integer> read(IInput read) throws IOException{
     String file = read.getPath();
     File inputFile = new File(file);
-    Scanner sc = new Scanner(inputFile);
+
+    BufferedReader reader = new BufferedReader(new FileReader(inputFile));
     ArrayList<Integer> al = new ArrayList<Integer>();
-    while(sc.hasNextLine()){
-      int num = sc.nextInt();
+    String line;
+    while((line = reader.readLine()) != null){
+      int num = Integer.parseInt(line);
       al.add(num);
     }
-    System.out.println(al);
-    sc.close();
+    reader.close();
     return al;
   }
 

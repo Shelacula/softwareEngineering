@@ -4,6 +4,7 @@ import static org.mockito.Mockito.when;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -16,7 +17,7 @@ import src.IInput;
 
 public class UserStartTest {
   @Test
-  public void testUserStart() throws IOException {
+  public void testUserStart() throws IOException, ExecutionException {
     //create a fake mock FileManager
     FileManager fakeFile = Mockito.mock(FileManager.class);
     Engine fakeEngine = Mockito.mock(Engine.class);

@@ -1,13 +1,13 @@
 package test;
+import java.io.IOException;
 import java.util.ArrayList;
 
-import src.FileManager;
-
+import src.FileManagerAPI;
 import src.IInput;
 import src.IOutput;
 import src.WriteReturn;
 
-public class InMemoryFileManager extends FileManager{
+public class InMemoryFileManager implements FileManagerAPI{
 
   public InMemoryFileManager() {
     super();
@@ -21,6 +21,13 @@ public class InMemoryFileManager extends FileManager{
 
   @Override
   public WriteReturn write(IOutput write, String computed) {
+    write.getArray().add(computed);
+    WriteReturn state = new WriteReturn(true);
+    return state;
+  }
+
+  @Override
+  public WriteReturn write(IOutput write, String computed, String delim) throws IOException {
     write.getArray().add(computed);
     WriteReturn state = new WriteReturn(true);
     return state;
