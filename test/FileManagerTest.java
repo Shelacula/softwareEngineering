@@ -1,5 +1,4 @@
 package test;
-import src.FileManager;
 import src.Engine;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -8,8 +7,6 @@ import static org.mockito.Mockito.when;
 import java.io.IOException;
 
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.any;
-import static org.mockito.Mockito.verify;
 
 public class FileManagerTest {
 
@@ -23,7 +20,7 @@ public class FileManagerTest {
     //define its behavior with mockito
     when(testEngine.compute(any(Integer.class))).thenReturn("This is a return value from the test.");
     
-    FileManager testFile = new InMemoryFileManager();
+    InMemoryFileManager testFile = new InMemoryFileManager();
 
 
     //test it?

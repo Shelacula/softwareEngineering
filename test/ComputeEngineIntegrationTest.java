@@ -3,19 +3,18 @@ import src.UserStart;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 import org.junit.Test;
 
 import src.Engine;
-import src.FileManager;
 
 public class ComputeEngineIntegrationTest {
 
   @Test
-  public void integrationTest() throws IOException{
+  public void integrationTest() throws IOException, ExecutionException{
     Engine testEngine = new Engine();
-    FileManager testFile = new InMemoryFileManager();
+    InMemoryFileManager testFile = new InMemoryFileManager();
     UserStart testUser = new UserStart(testFile, testEngine);
 
     TestInput testInput = new TestInput();
@@ -28,14 +27,13 @@ public class ComputeEngineIntegrationTest {
     testUser.startComputationJob(testInput, testOutput);
     
 
-    List<String> result = testOutput.getArray();
+    ArrayList<String> result = testOutput.getArray();
+    System.out.println(result);
 
-    List<String> compare = new ArrayList<String>();
+    ArrayList<String> compare = new ArrayList<String>();
     compare.add("1");
     compare.add("11");
     compare.add("68");
-
-    System.out.println(result.get(1));
 
     assert result.equals(compare); 
 

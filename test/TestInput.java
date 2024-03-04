@@ -14,7 +14,6 @@ public class TestInput implements IInput {
 
   @Override
   public String getPath() {
-    // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'getPath'");
   }
   @Override

@@ -14,7 +14,6 @@ public class Output implements IOutput{
   }
   @Override
   public ArrayList<String> getArray() {
-    // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'getArray'");
   }
 }

@@ -1,8 +1,6 @@
 package test;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 
-import src.FileManager;
 import src.Engine;
 
 public class EngineTest {
@@ -11,6 +9,6 @@ public class EngineTest {
   public void computeTest(){
     Engine testEngine = new Engine();
 
-    String result = testEngine.compute(10);
+    testEngine.compute(10);
   }
 }

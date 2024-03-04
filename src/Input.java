@@ -19,7 +19,6 @@ public class Input implements IInput {
 
   @Override
   public ArrayList<Integer> getArray() {
-    // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'getArray'");
   }
 }

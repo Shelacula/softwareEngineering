@@ -11,7 +11,6 @@ public class TestOutput implements IOutput {
   }
   @Override
   public String getPath() {
-    // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'getPath'");
   }
 }
