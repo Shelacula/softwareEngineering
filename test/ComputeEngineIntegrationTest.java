@@ -1,13 +1,9 @@
-package test;
-import src.UserStart;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
 import org.junit.Test;
-
-import src.Engine;
 
 public class ComputeEngineIntegrationTest {
 

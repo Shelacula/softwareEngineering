@@ -1,11 +1,7 @@
-package test;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
-import src.FileManagerAPI;
-import src.IInput;
-import src.IOutput;
-import src.WriteReturn;
 
 public class InMemoryFileManager implements FileManagerAPI{
 

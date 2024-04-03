@@ -1,7 +1,6 @@
-package test;
+
 import org.junit.jupiter.api.Test;
 
-import src.Engine;
 
 public class EngineTest {
 

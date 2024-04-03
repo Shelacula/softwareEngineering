@@ -1,4 +1,3 @@
-package test;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,9 +13,6 @@ import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import src.UserStart;
-import src.Engine;
-import src.FileManager;
 
 public class TestMultiUser {
 	

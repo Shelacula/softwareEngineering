@@ -1,4 +1,4 @@
-package test;
+
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
@@ -9,10 +9,6 @@ import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-import src.FileManager;
-import src.UserStart;
-import src.Engine;
-import src.IInput;
 
 
 public class UserStartTest {

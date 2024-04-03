@@ -16,5 +16,6 @@
         "exclude": [
             "lib/junit-platform-console-standalone-1.10.2.jar"
         ]
-    }
+    },
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

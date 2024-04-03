@@ -1,7 +1,6 @@
-package test;
+
 import java.util.ArrayList;
 
-import src.IInput;
 
 public class TestInput implements IInput {
 

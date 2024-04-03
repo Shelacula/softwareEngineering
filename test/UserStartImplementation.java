@@ -1,10 +1,9 @@
-package test;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
 
-import src.Engine;
 
 public class UserStartImplementation {
 

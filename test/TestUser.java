@@ -1,12 +1,8 @@
-package test;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 
-import src.Input;
-import src.Output;
-import src.UserStart;
 
 
 public class TestUser {
