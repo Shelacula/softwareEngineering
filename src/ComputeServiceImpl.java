@@ -5,7 +5,7 @@ import io.grpc.InsecureChannelCredentials;
 import io.grpc.ManagedChannel;
 import io.grpc.stub.StreamObserver;
 
-public class ComputeServiceImpl extends ComputeServiceGrpc.ComputeServiceImplBase {
+public class ComputeServiceImpl extends ComputeServiceImplBase {
     public void computeEngine(FilePaths.PathsRequest request, StreamObserver<FilePaths.ComputedResponse> responseObserver) {
       FilePaths.ComputedResponse response;
 
