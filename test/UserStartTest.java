@@ -24,7 +24,7 @@ public class UserStartTest {
 
 
     TestInput fakeInput = new TestInput();
-    TestOutput fakeOutput = new TestOutput();
+    Output fakeOutput = new Output("test/testOutputFile2.test");
     String fakeDelimit = "";
 
 

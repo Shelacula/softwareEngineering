@@ -1,0 +1,14 @@
+message PathsRequest {
+    optional string input = 1;
+    optional string output = 2;
+    optional string delimit = 3;
+}
+
+message ComputedResponse {
+    optional string response = 1;
+    optional string errorMessage = 2;
+}
+
+service ComputeService {
+    rpc ComputeEngine (PathsRequest) returns (ComputedResponse) {}
+}

@@ -21,12 +21,5 @@ public class InMemoryFileManager implements FileManagerAPI{
     WriteReturn state = new WriteReturn(true);
     return state;
   }
-
-  @Override
-  public WriteReturn write(IOutput write, String computed, String delim) throws IOException {
-    write.getArray().add(computed);
-    WriteReturn state = new WriteReturn(true);
-    return state;
-  }
     
 }
