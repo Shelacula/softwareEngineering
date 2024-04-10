@@ -1,0 +1,19 @@
+message FMRequest {
+    optional string input = 1;
+    optional string output = 2;
+    optional string computed = 3;
+}
+
+message ReadResponse {
+    repeated int32 returnArr = 1;
+}
+
+message WriteResponse {
+    optional string response = 1;
+    optional string errorMessage = 2;
+}
+
+service FMService {
+    rpc FileManagerRead (FMRequest) returns (ReadResponse) {}
+    rpc FileManagerWrite (FMRequest) returns (WriteResponse) {}
+}

@@ -1,4 +1,7 @@
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.Callable;
@@ -25,6 +28,13 @@ public class UserStart implements UserStartAPI{
   public void startComputationJob(IInput input, IOutput output, String delimit) throws IOException, java.util.concurrent.ExecutionException {
     ArrayList<Integer> inputArr = fileManager.read(input);
     ArrayList<Future<String>> futures = new ArrayList<>();
+
+    //writer for the delimiter
+    String outPath = output.getPath();
+    File outputFile = new File(outPath);
+    FileWriter fw = new FileWriter(outputFile, true);
+    BufferedWriter out = new BufferedWriter(fw);
+
     for(int i=0;i<inputArr.size();i++){
       int inputNumber = inputArr.get(i).intValue();
       Future<String> resultString = executor.submit(new ComputeTask(engine, inputNumber));
@@ -33,30 +43,17 @@ public class UserStart implements UserStartAPI{
     for (Future<String> future : futures) {
       try {
           String result = future.get();
-          fileManager.write(output, result, delimit);
+          fileManager.write(output, result + delimit);
       } catch (InterruptedException | ExecutionException e) {
           e.printStackTrace();
       }
   }
+    out.close();
   }
 
   @Override
   public void startComputationJob(IInput input, IOutput output) throws IOException, java.util.concurrent.ExecutionException{
-    ArrayList<Integer> inputArr = fileManager.read(input);
-    ArrayList<Future<String>> futures = new ArrayList<>();
-    for(int i=0;i<inputArr.size();i++){
-      int inputNumber = inputArr.get(i).intValue();
-      Future<String> resultString = executor.submit(new ComputeTask(engine, inputNumber));
-      futures.add(resultString);
-    }
-    for (Future<String> future : futures) {
-      try {
-          String result = future.get();
-          fileManager.write(output, result);
-      } catch (InterruptedException | ExecutionException e) {
-          e.printStackTrace();
-      }
-  }
+    startComputationJob(input, output, ";");
   }
 
   static class ComputeTask implements Callable<String> {
@@ -70,7 +67,6 @@ public class UserStart implements UserStartAPI{
   
     @Override
     public String call() {
-        System.out.print(" THIS IS A THREAD ");
         return engine.compute(inputValue);
     }
   }
