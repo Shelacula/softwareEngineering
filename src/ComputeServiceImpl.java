@@ -5,9 +5,9 @@ import io.grpc.InsecureChannelCredentials;
 import io.grpc.ManagedChannel;
 import io.grpc.stub.StreamObserver;
 
-public class ComputeServiceImpl extends ComputeServiceImplBase {
-    public void computeEngine(PathsRequest request, StreamObserver<ComputedResponse> responseObserver) {
-      ComputedResponse response;
+public class ComputeServiceImpl extends ComputeServiceGrpc.ComputeServiceImplBase {
+    public void computeEngine(FilePaths.PathsRequest request, StreamObserver<FilePaths.ComputedResponse> responseObserver) {
+      FilePaths.ComputedResponse response;
 
       String target = "localhost:50052"; 
       ManagedChannel channel = Grpc.newChannelBuilder(target, InsecureChannelCredentials.create())
@@ -27,11 +27,11 @@ public class ComputeServiceImpl extends ComputeServiceImplBase {
           coordinator.startComputationJob(inputWrapper, outputWrapper, delimiter);
           System.out.println("Inside ComputeServiceImpl");
           String result = "Success!";
-          response = ComputedResponse.newBuilder()
+          response = FilePaths.ComputedResponse.newBuilder()
           .setResponse(result)
           .build();
         } catch (Exception e) {
-          response = ComputedResponse.newBuilder()
+          response = FilePaths.ComputedResponse.newBuilder()
                   .setResponse("Failed: " + e)
                   .build();
         }
