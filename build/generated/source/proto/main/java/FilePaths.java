@@ -2,6 +2,7 @@
 // source: filePaths.proto
 
 // Protobuf Java Version: 3.25.1
+@SuppressWarnings("all")
 public final class FilePaths {
   private FilePaths() {}
   public static void registerAllExtensions(

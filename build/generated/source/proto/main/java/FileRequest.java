@@ -2,6 +2,7 @@
 // source: fileRequest.proto
 
 // Protobuf Java Version: 3.25.1
+@SuppressWarnings("all")
 public final class FileRequest {
   private FileRequest() {}
   public static void registerAllExtensions(

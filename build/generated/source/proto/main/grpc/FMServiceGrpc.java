@@ -1,5 +1,6 @@
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
+@SuppressWarnings("all")
 /**
  */
 @javax.annotation.Generated(
