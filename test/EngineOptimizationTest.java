@@ -4,11 +4,11 @@ import java.util.concurrent.ExecutionException;
 
 import org.junit.Test;
 
-public class ComputeEngineIntegrationTest {
+public class EngineOptimizationTest {
 
   @Test
   public void integrationTest() throws IOException, ExecutionException{
-    Engine testEngine = new Engine();
+    EngineOpt testEngine = new EngineOpt();
     FileManager testFile = new FileManager();
     UserStart testUser = new UserStart(testFile, testEngine);
 
