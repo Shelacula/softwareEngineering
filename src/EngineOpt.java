@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class EngineOpt implements EngineAPI {
 
   //default constructor for Engine

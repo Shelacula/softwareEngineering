@@ -33,15 +33,9 @@ public class FileManagerClient implements FileManagerAPI {
 	      FileRequest.WriteResponse response;
 	    try {
 	      response = blockingStub.fileManagerWrite(request);
-<<<<<<< HEAD
         return new WriteReturn(true);
 	    } catch (StatusRuntimeException e) {
         return new WriteReturn(false);
-=======
-          return new WriteReturn(true);
-	    } catch (StatusRuntimeException e) {
-          return new WriteReturn(false);
->>>>>>> 46c3f9974634c7abc3082380eb42c3e2a96c81d5
 	    }
       }
 }
