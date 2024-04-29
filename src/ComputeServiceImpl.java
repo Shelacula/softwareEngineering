@@ -44,7 +44,6 @@ public class ComputeServiceImpl extends ComputeServiceGrpc.ComputeServiceImplBas
         try {
           channel.shutdownNow().awaitTermination(5, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
-          // TODO Auto-generated catch block
           e.printStackTrace();
         }
       }
