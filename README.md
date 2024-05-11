@@ -13,3 +13,6 @@ Engine.java Benchmark: 1074 milliseconds elapsed to calculate number 9000000
 
 post-tuning (refactored code to use 2D array instead of matrix, removed multiple loops): 
 EngineOpt.java Benchmark: 171 milliseconds elapsed to calculate number 9000000
+
+# Documentation of 5 WHy's
+<img width="834" alt="systemdiagram" src="https://sunynp-my.sharepoint.com/:w:/r/personal/guerriej2_newpaltz_edu/Documents/The%20five%20whys.docx?d=wd270bf2fbe7e49ac967a32b5df81505b&csf=1&web=1&e=492pTj">
