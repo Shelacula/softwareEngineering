@@ -12,6 +12,7 @@ pre-tuning:
 Engine.java Benchmark: 1074 milliseconds elapsed to calculate number 9000000
 
 post-tuning (refactored code to use 2D array instead of matrix, removed multiple loops): 
+
 EngineOpt.java Benchmark: 171 milliseconds elapsed to calculate number 
 
 # Documentation of 5 Why's
